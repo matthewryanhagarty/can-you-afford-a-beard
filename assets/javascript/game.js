@@ -10,10 +10,30 @@ var maxSpentNumber = 12;
 
 var totalDollarAmount = Math.floor((Math.random() * (+maxAmountNumber - +minAmountNumber) + +minAmountNumber));
 
-var totalDollarsSpent = Math.floor((Math.random() * (+maxSpentNumber - +minSpentNumber) + +minSpentNumber));
+$("#total-dollar-amount").text(totalDollarAmount);
+
+var totalDollarsSpent = 0;
+
+$("#total-dollars-spent").text(totalDollarsSpent);
+
+var imageNumber= Math.floor((Math.random() * (+maxSpentNumber - +minSpentNumber) + +minSpentNumber));
 
 // console.log(totalDollarAmount);
-console.log(totalDollarsSpent);
+// console.log(totalDollarsSpent);
+
+// var num1 = "";
+// var num2 = "";
+// var num3 = "";
+// var num4 = "";
+
+// for (var i = 0; i < imageNumber.length; i++)
+// var oil = $(this).attr("#oil", imageNumber);
+var oil = "";
+oil.attr("#oil", imageNumber);
+oil.addClass("image");
+
+console.log(oil);
+
 
 
 
