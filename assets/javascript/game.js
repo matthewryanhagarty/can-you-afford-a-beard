@@ -16,23 +16,29 @@ var totalDollarsSpent = 0;
 
 $("#total-dollars-spent").text(totalDollarsSpent);
 
-var imageNumber= Math.floor((Math.random() * (+maxSpentNumber - +minSpentNumber) + +minSpentNumber));
+var imageNumber1= 1;
+var imageNumber2= Math.floor((Math.random() * (+maxSpentNumber - +minSpentNumber) + +minSpentNumber));
+var imageNumber3= Math.floor((Math.random() * (+maxSpentNumber - +minSpentNumber) + +minSpentNumber));
+var imageNumber4= Math.floor((Math.random() * (+maxSpentNumber - +minSpentNumber) + +minSpentNumber));
 
 // console.log(totalDollarAmount);
 // console.log(totalDollarsSpent);
 
-// var num1 = "";
-// var num2 = "";
-// var num3 = "";
-// var num4 = "";
+var oil = imageNumber1;
+var shampoo = imageNumber2;
+var conditioner = imageNumber3;
+var comb = imageNumber4;
 
-// for (var i = 0; i < imageNumber.length; i++)
-// var oil = $(this).attr("#oil", imageNumber);
-var oil = "";
-oil.attr("#oil", imageNumber);
-oil.addClass("image");
+// console.log(oil);
+// console.log(shampoo);
+// console.log(conditioner);
+// console.log(comb);
 
-console.log(oil);
+$(".image").on("click", function() {
+  var imageValue = oil;
+  imageValue = parseInt(imageValue);
+  totalDollarsSpent += imageValue;
+});
 
 
 
