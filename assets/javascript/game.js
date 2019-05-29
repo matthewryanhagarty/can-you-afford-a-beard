@@ -34,10 +34,32 @@ var comb = imageNumber4;
 // console.log(conditioner);
 // console.log(comb);
 
-$(".image").on("click", function() {
+$("#oil").on("click", function() {
   var imageValue = oil;
   imageValue = parseInt(imageValue);
   totalDollarsSpent += imageValue;
+  $("#total-dollars-spent").text(totalDollarsSpent);
+});
+
+$("#shampoo").on("click", function() {
+  var imageValue = shampoo;
+  imageValue = parseInt(imageValue);
+  totalDollarsSpent += imageValue;
+  $("#total-dollars-spent").text(totalDollarsSpent);
+});
+
+$("#conditioner").on("click", function() {
+  var imageValue = conditioner;
+  imageValue = parseInt(imageValue);
+  totalDollarsSpent += imageValue;
+  $("#total-dollars-spent").text(totalDollarsSpent);
+});
+
+$("#comb").on("click", function() {
+  var imageValue = comb;
+  imageValue = parseInt(imageValue);
+  totalDollarsSpent += imageValue;
+  $("#total-dollars-spent").text(totalDollarsSpent);
 });
 
 
