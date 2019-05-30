@@ -29,7 +29,7 @@ $(document).ready(function(){
   var conditioner = Math.floor((Math.random() * (+12 - +2) + +2));
   var comb = Math.floor((Math.random() * (+12 - +2) + +2));
 
-  // set data value = important
+
   $("#oil").attr("data-value", oil);
   $("#shampoo").attr("data-value", shampoo);
   $("#conditioner").attr("data-value", conditioner);
@@ -48,7 +48,7 @@ $(document).ready(function(){
       reset();
     } else if
       (totalDollarsSpent >= totalDollarAmount) {
-        alert("Your beard looks great, but you got to save some of that money for rent.");
+        alert("Your beard looks great, but you got to save some of that money for rent!");
         losses++;
         $("#losses").text(losses);
         reset();

@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Cambo|Fredericka+the+Great|Homemade+Apple|Major+Mono+Display|Nixie+One|Petit+Formal+Script|Playfair+Display+SC&display=swap" rel="stylesheet">
 </head>
@@ -19,9 +21,10 @@
     </div>
 <div class="container">
     <div class="row">
-        <div class="col-md-9">
-            <p>Contrary to popular belief, beards don't just naturally look beautiful. There is a lot of upkeep that happens to maintain the mane as they say. With great power, comes great responsibility, and unfortunately responsibility costs money.</p>
-            <p>Directions: </p>
+        <div class="col-md-9" id="instructions">
+            <p>Contrary to popular belief, beards don't just naturally look beautiful. There is a lot of upkeep that happens to maintain the mane as they say. With great power, comes great responsibility, & unfortunately responsibility costs money.</p>
+            <p><b>Directions:</b> Your goal is to purchase (click on) enough beard product to keep the hair on your face looking fresh without going over your allotted budget. In order to win, you must match your *Dollars Spent* exactly to your *Total Dollar Amount*. Each product will cost an uknown amount & you can only figure out its total by purchasing it. After a win/loss, your *Total Dollar Amount* will change & each product will cost a new amount. Remember to spend your money wisely or else you won't have enough money to pay rent! </p>
+            <p><b>Hint:</b> Beard Oil will always cost $1.
         </div>
         <div class="col-md-3">
             <h6 style="color: black">Total Dollar Amount: $  <span id="total-dollar-amount" style="color:black"></span></h6>
@@ -31,21 +34,21 @@
     </div>
     <div class="row">
         <div class="col-md-3">
-            <img src="assets/images/beard-oil.png" class="image img-fluid" id="oil" style="height: 200px; width: 200px">
+            <img src="assets/images/beard-oil.png" class="image img-fluid" id="oil" style="height: 200px; width: 200px" alt="beard oil">
         </div>
         <div class="col-md-3">
-            <img src="assets/images/beard-shampoo.jpg" class="image img-fluid" id="shampoo" style="height: 200px; width: 200px">
+            <img src="assets/images/beard-shampoo.jpg" class="image img-fluid" id="shampoo" style="height: 200px; width: 200px" alt="beard shampoo">
         </div>
         <div class="col-md-3">
-            <img src="assets/images/beard-conditioner.jpg" class="image img-fluid" id="conditioner" style="height: 200px; width: 200px">
+            <img src="assets/images/beard-conditioner.jpg" class="image img-fluid" id="conditioner" style="height: 200px; width: 200px" alt="beard conditioner">
         </div>
         <div class="col-md-3">
-            <img src="assets/images/mustache-comb.jpg" class="image img-fluid" id="comb" style="height: 200px; width: 200px">
+            <img src="assets/images/mustache-comb.jpg" class="image img-fluid" id="comb" style="height: 200px; width: 200px" alt="mustache comb">
         </div>
     </div>
     <br>
     <div class="row">
-        <div class="col-md-6" style="padding-left: 20px">
+        <div class="col-md-6" style="padding-left: 20px" id="wins-losses">
             <h6 style="color:black">Wins: <span id="wins" style="color:black"></span></h6>
             <h6 style="color: black">Losses: <span id="losses" style="color: black"></span></h6>
         </div>
