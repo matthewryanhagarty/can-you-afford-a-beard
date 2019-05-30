@@ -31,13 +31,13 @@ $(document).ready(function(){
 
   // set data value = important
   $("#oil").attr("data-value", oil);
+  $("#shampoo").attr("data-value", shampoo);
+  $("#conditioner").attr("data-value", conditioner);
+  $("#comb").attr("data-value", comb);
 
-
   
-  $("#oil").on("click", function() {
-  // var imageValue = $(this).attr("data-value");
-
-    var imageValue = oil;
+  $(".image").on("click", function() {
+  var imageValue = $(this).attr("data-value");
     imageValue = parseInt(imageValue);
     totalDollarsSpent += imageValue;
     $("#total-dollars-spent").text(totalDollarsSpent);
@@ -48,72 +48,12 @@ $(document).ready(function(){
       reset();
     } else if
       (totalDollarsSpent >= totalDollarAmount) {
-        alert("Your beard looks good! Save some of that money for rent.");
+        alert("Your beard looks great, but you got to save some of that money for rent.");
         losses++;
         $("#losses").text(losses);
         reset();
     }
   });
-  
-  $("#shampoo").on("click", function() {
-    var imageValue = shampoo;
-    imageValue = parseInt(imageValue);
-    totalDollarsSpent += imageValue;
-    $("#total-dollars-spent").text(totalDollarsSpent);
-  
-    if (totalDollarsSpent === totalDollarAmount) {
-      wins++;
-      $("#wins").text(wins);
-      reset();
-    } else if
-      (totalDollarsSpent >= totalDollarAmount) {
-        alert("DUDE, save some of that cash money for rent.");
-        losses++;
-        $("#losses").text(losses);
-        reset();
-    }
-  });
-  
-  $("#conditioner").on("click", function() {
-    
-    var imageValue = conditioner;
-    imageValue = parseInt(imageValue);
-    totalDollarsSpent += imageValue;
-    $("#total-dollars-spent").text(totalDollarsSpent);
-  
-    if (totalDollarsSpent === totalDollarAmount) {
-      wins++;
-      $("#wins").text(wins);
-      reset();
-    } else if
-      (totalDollarsSpent >= totalDollarAmount) {
-        alert("DUDE, save some of that cash money for rent.");
-        losses++;
-        $("#losses").text(losses);
-        reset();
-    }
-  });
-  
-  $("#comb").on("click", function() {
-    var imageValue = comb;
-    imageValue = parseInt(imageValue);
-    totalDollarsSpent += imageValue;
-    $("#total-dollars-spent").text(totalDollarsSpent);
-  
-    if (totalDollarsSpent === totalDollarAmount) {
-      wins++;
-      $("#wins").text(wins);
-      reset();
-    } else if
-      (totalDollarsSpent >= totalDollarAmount) {
-        alert("DUDE, save some of that cash money for rent.");
-        losses++;
-        $("#losses").text(losses);
-        reset();
-    }
-  });
-  
-  
   
   
   });
