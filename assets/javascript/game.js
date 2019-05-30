@@ -48,7 +48,7 @@ $(document).ready(function(){
       reset();
     } else if
       (totalDollarsSpent >= totalDollarAmount) {
-        alert("Your beard looks great, but you got to save some of that money for rent!");
+        alert("Your beard looks great, but you have to save some of that money for rent!");
         losses++;
         $("#losses").text(losses);
         reset();
