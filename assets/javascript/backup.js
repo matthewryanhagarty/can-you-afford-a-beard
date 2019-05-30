@@ -5,13 +5,9 @@ $(document).ready(function(){
     
     $("#wins").text(wins);
     $("#losses").text(losses);
+
     
-    var minAmountNumber = 19;
-    var maxAmountNumber = 120;
-    var minSpentNumber = 2;
-    var maxSpentNumber = 12;
-    
-    var totalDollarAmount = Math.floor((Math.random() * (+maxAmountNumber - +minAmountNumber) + +minAmountNumber));
+    var totalDollarAmount = Math.floor((Math.random() * (+120 - +19) + +19));
     
     $("#total-dollar-amount").text(totalDollarAmount);
     
@@ -21,31 +17,22 @@ $(document).ready(function(){
     
     
     function reset() {
-      totalDollarAmount = "";
+      totalDollarAmount = Math.floor((Math.random() * (+120 - +19) + +19));
+      $("#total-dollar-amount").text(totalDollarAmount);
       totalDollarsSpent = 0;
+      $("#total-dollars-spent").text(totalDollarsSpent);
     };
     
     
-    
-    var imageNumber1= 1;
-    var imageNumber2= Math.floor((Math.random() * (+maxSpentNumber - +minSpentNumber) + +minSpentNumber));
-    var imageNumber3= Math.floor((Math.random() * (+maxSpentNumber - +minSpentNumber) + +minSpentNumber));
-    var imageNumber4= Math.floor((Math.random() * (+maxSpentNumber - +minSpentNumber) + +minSpentNumber));
+    var oil = 1;
+    var shampoo = Math.floor((Math.random() * (+12 - +2) + +2));
+    var conditioner = Math.floor((Math.random() * (+12 - +2) + +2));
+    var comb = Math.floor((Math.random() * (+12 - +2) + +2));
 
-    // set data value
-    $("#oil").attr("data-value", imageNumber1);
+    // set data value = important
+    $("#oil").attr("data-value", oil);
 
 
-    // for (var i = 0; i < numberOptions.length; i++) {
-
-    // }
-    
-    var oil = imageNumber1;
-    var shampoo = imageNumber2;
-    var conditioner = imageNumber3;
-    var comb = imageNumber4;
-    
-    
     
     $("#oil").on("click", function() {
     // var imageValue = $(this).attr("data-value");
@@ -61,7 +48,7 @@ $(document).ready(function(){
         reset();
       } else if
         (totalDollarsSpent >= totalDollarAmount) {
-          alert("DUDE, save some of that cash money for rent.");
+          alert("Your beard looks good! Save some of that money for rent.");
           losses++;
           $("#losses").text(losses);
           reset();
